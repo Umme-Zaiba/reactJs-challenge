@@ -1,0 +1,87 @@
+.comment-section {
+  width: 50%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.comment {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+strong {
+  color: #333;
+  margin: 6px;
+}
+
+button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333;
+}
+
+.comment button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+input {
+  width: 70%;
+  padding: 5px;
+  margin-right: 10px;
+}
+.commentdiv{
+  padding: 10px;
+}
+form {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 5px;
+}
+
+button[type="submit"] {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333;
+}
+
+button[type="submit"]:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+/* button{
+  margin : 5px;
+  border-radius: 5px;
+  border: 1px solid blue;
+  padding: 5px;
+}
+input{
+  padding: 5px;
+  border: 1px solid blue;
+} */
