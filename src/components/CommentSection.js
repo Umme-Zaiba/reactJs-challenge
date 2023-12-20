@@ -58,7 +58,8 @@ const Comment = ({ id, user, content, inputType, replies, onEdit, onReply, onDel
                 value={replyInputType}
                 onChange={(e) => setReplyInputType(e.target.value)}
               >
-                
+                <option value="text">Text</option>
+                <option value="textarea">Textarea</option>
               </select>
               <button onClick={handleReply}>Post</button>
             </div>
@@ -105,10 +106,10 @@ const CommentSection = () => {
   const replyToComment = (parentCommentId, replyContent, inputType) => {
     const newReply = {
       id: comments.length + 1,
-      user: 'User', 
+      user: 'User', // Replace with actual user info
       content: replyContent,
-      inputType: inputType || 'text', 
-      replies: [],
+      inputType: inputType || 'text', // Default to 'text' if inputType is not provided
+      replies: [], // Initialize an empty array for replies
     };
 
     const updatedComments = addReplyToComment(comments, parentCommentId, newReply);
@@ -146,7 +147,7 @@ const CommentSection = () => {
           id={comment.id}
           user={comment.user}
           content={comment.content}
-          inputType={comment.inputType || 'text'} 
+          inputType={comment.inputType || 'text'} // Default to 'text' if inputType is not provided
           replies={comment.replies}
           onEdit={editComment}
           onReply={replyToComment}
@@ -160,16 +161,20 @@ const CommentSection = () => {
           e.preventDefault();
           const newComment = {
             id: comments.length + 1,
-            user: 'User',
+            user: 'User', // Replace with actual user info
             content: e.target.comment.value,
-            inputType: e.target.inputType.value || 'text', 
-            replies: [], 
+            inputType: e.target.inputType.value || 'text', // Default to 'text' if inputType is not provided
+            replies: [], // Initialize an empty array for replies
           };
           addComment(newComment);
           e.target.comment.value = '';
         }}
       >
         <input type="text" name="comment" placeholder="Add a comment..." />
+        <select name="inputType">
+          {/* <option value="text">Text</option>
+          <option value="textarea">Textarea</option> */}
+        </select>
         <button type="submit">Submit</button>
       </form>
     </div>
