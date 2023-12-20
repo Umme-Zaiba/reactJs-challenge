@@ -106,10 +106,10 @@ const CommentSection = () => {
   const replyToComment = (parentCommentId, replyContent, inputType) => {
     const newReply = {
       id: comments.length + 1,
-      user: 'User', // Replace with actual user info
+      user: 'User',
       content: replyContent,
-      inputType: inputType || 'text', // Default to 'text' if inputType is not provided
-      replies: [], // Initialize an empty array for replies
+      inputType: inputType || 'text', 
+      replies: [], 
     };
 
     const updatedComments = addReplyToComment(comments, parentCommentId, newReply);
@@ -147,7 +147,7 @@ const CommentSection = () => {
           id={comment.id}
           user={comment.user}
           content={comment.content}
-          inputType={comment.inputType || 'text'} // Default to 'text' if inputType is not provided
+          inputType={comment.inputType || 'text'} 
           replies={comment.replies}
           onEdit={editComment}
           onReply={replyToComment}
@@ -161,10 +161,10 @@ const CommentSection = () => {
           e.preventDefault();
           const newComment = {
             id: comments.length + 1,
-            user: 'User', // Replace with actual user info
+            user: 'User', 
             content: e.target.comment.value,
-            inputType: e.target.inputType.value || 'text', // Default to 'text' if inputType is not provided
-            replies: [], // Initialize an empty array for replies
+            inputType: e.target.inputType.value || 'text', 
+            replies: [],
           };
           addComment(newComment);
           e.target.comment.value = '';
@@ -172,8 +172,7 @@ const CommentSection = () => {
       >
         <input type="text" name="comment" placeholder="Add a comment..." />
         <select name="inputType">
-          {/* <option value="text">Text</option>
-          <option value="textarea">Textarea</option> */}
+         
         </select>
         <button type="submit">Submit</button>
       </form>
